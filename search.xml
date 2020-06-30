@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+    
+    <entry>
+      <title>勿以善小而不为</title>
+      <link href="/2020/06/30/%E5%8B%BF%E4%BB%A5%E5%96%84%E5%B0%8F%E8%80%8C%E4%B8%8D%E4%B8%BA/"/>
+      <url>/2020/06/30/%E5%8B%BF%E4%BB%A5%E5%96%84%E5%B0%8F%E8%80%8C%E4%B8%8D%E4%B8%BA/</url>
+      <content type="html"><![CDATA[<h2 id="我为人人，人人为我"><a href="#我为人人，人人为我" class="headerlink" title="我为人人，人人为我"></a>我为人人，人人为我</h2>]]></content>
+      
+      <categories>
+          
+          <category> 其他 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 爱心 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>gitlab修改用户密码</title>
+      <link href="/2020/04/21/gitlab%E4%BF%AE%E6%94%B9%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81/"/>
+      <url>/2020/04/21/gitlab%E4%BF%AE%E6%94%B9%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81/</url>
+      <content type="html"><![CDATA[<h3 id="这里是-参考文献"><a href="#这里是-参考文献" class="headerlink" title="这里是 参考文献"></a>这里是 <a href="https://blog.csdn.net/weixin_30551947/article/details/96584895" title="别人的博客" target="_blank" rel="noopener">参考文献</a></h3><h4 id="首先ssh登录你的gitlab服务器，并执行下面命令"><a href="#首先ssh登录你的gitlab服务器，并执行下面命令" class="headerlink" title="首先ssh登录你的gitlab服务器，并执行下面命令"></a>首先ssh登录你的gitlab服务器，并执行下面命令</h4><p><code>gitlab-rails console production</code></p><h4 id="直到重新加载好控制台，这里有多种方法来查找你的root用户"><a href="#直到重新加载好控制台，这里有多种方法来查找你的root用户" class="headerlink" title="直到重新加载好控制台，这里有多种方法来查找你的root用户"></a>直到重新加载好控制台，这里有多种方法来查找你的root用户</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">user = User.where(id: 1).first</span><br><span class="line">id在用户资料中能看到具体的</span><br></pre></td></tr></table></figure><h4 id="或者执行下面都行"><a href="#或者执行下面都行" class="headerlink" title="或者执行下面都行"></a>或者执行下面都行</h4><p><code>user = User.find_by(email: &#39;admin@local.host&#39;)</code></p><p><code>user = User.find_by(name: &#39;admin&#39;)</code></p><h4 id="执行完上面的命令后，现在可以修改密码了，如下命令"><a href="#执行完上面的命令后，现在可以修改密码了，如下命令" class="headerlink" title="执行完上面的命令后，现在可以修改密码了，如下命令"></a>执行完上面的命令后，现在可以修改密码了，如下命令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">user.password = &apos;secret_pass&apos;</span><br><span class="line">user.password_confirmation = &apos;secret_pass&apos;</span><br></pre></td></tr></table></figure><h4 id="修改完后要记得保存，请执行下面命令"><a href="#修改完后要记得保存，请执行下面命令" class="headerlink" title="修改完后要记得保存，请执行下面命令"></a>修改完后要记得保存，请执行下面命令</h4><p><code>user.save!</code></p>]]></content>
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> gitlab </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>基于以太坊发布代币</title>
+      <link href="/2020/03/25/%E5%9F%BA%E4%BA%8E%E4%BB%A5%E5%A4%AA%E5%9D%8A%E5%8F%91%E5%B8%83%E4%BB%A3%E5%B8%81/"/>
+      <url>/2020/03/25/%E5%9F%BA%E4%BA%8E%E4%BB%A5%E5%A4%AA%E5%9D%8A%E5%8F%91%E5%B8%83%E4%BB%A3%E5%B8%81/</url>
+      <content type="html"><![CDATA[<h3 id="学习笔记，因为版本的原因，有可能会有出入"><a href="#学习笔记，因为版本的原因，有可能会有出入" class="headerlink" title="学习笔记，因为版本的原因，有可能会有出入"></a>学习笔记，因为版本的原因，有可能会有出入</h3><h3 id="这里是-参考文献"><a href="#这里是-参考文献" class="headerlink" title="这里是 参考文献"></a>这里是 <a href="https://bbs.csdn.net/topics/394878321" title="别人的博客" target="_blank" rel="noopener">参考文献</a></h3><p><img src="http://qiniublog.fplus.top/20200325a02.png" alt="a02"></p><h4 id="如上图-在chrome浏览器中，安装MetaMask插件-选择测试网络，可以领取测试的eth"><a href="#如上图-在chrome浏览器中，安装MetaMask插件-选择测试网络，可以领取测试的eth" class="headerlink" title="如上图 在chrome浏览器中，安装MetaMask插件 选择测试网络，可以领取测试的eth"></a>如上图 在chrome浏览器中，安装<a href="https://metamask.io/" title="MetaMask官网" target="_blank" rel="noopener">MetaMask</a>插件 选择测试网络，可以领取测试的eth</h4><p><img src="http://qiniublog.fplus.top/20200325a01.png" alt="a01"></p><h4 id="进入-https-remix-ethereum-org-初始进去只有两个菜单，选插件安装如上图所示插件Deploy-amp-run-transactions和Solidity-compiler"><a href="#进入-https-remix-ethereum-org-初始进去只有两个菜单，选插件安装如上图所示插件Deploy-amp-run-transactions和Solidity-compiler" class="headerlink" title="进入 https://remix.ethereum.org 初始进去只有两个菜单，选插件安装如上图所示插件Deploy &amp; run transactions和Solidity compiler"></a>进入 <a href="https://remix.ethereum.org" title="Remix Solidity IDE" target="_blank" rel="noopener">https://remix.ethereum.org</a> 初始进去只有两个菜单，选插件安装如上图所示插件Deploy &amp; run transactions和Solidity compiler</h4><p><img src="http://qiniublog.fplus.top/20200325a03.png" alt="a03"></p><h4 id="新建合约文件复制如下代码，不做任何修改"><a href="#新建合约文件复制如下代码，不做任何修改" class="headerlink" title="新建合约文件复制如下代码，不做任何修改"></a>新建合约文件复制如下代码，不做任何修改</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line">pragma solidity ^0.4.16;</span><br><span class="line"> </span><br><span class="line"> interface tokenRecipient &#123; function receiveApproval(address _from, uint256 _value, address _token, bytes _extraData) public; &#125;</span><br><span class="line"> </span><br><span class="line"> contract TokenERC20 &#123;</span><br><span class="line">     string public name;</span><br><span class="line">     string public symbol;</span><br><span class="line">     uint8 public decimals = 18;  // 18 是建议的默认值</span><br><span class="line">     uint256 public totalSupply;</span><br><span class="line"> </span><br><span class="line">     mapping (address =&gt; uint256) public balanceOf;  //</span><br><span class="line">     mapping (address =&gt; mapping (address =&gt; uint256)) public allowance;</span><br><span class="line"> </span><br><span class="line">     event Transfer(address indexed from, address indexed to, uint256 value);</span><br><span class="line"> </span><br><span class="line">     event Burn(address indexed from, uint256 value);</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">     function TokenERC20(uint256 initialSupply, string tokenName, string tokenSymbol) public &#123;</span><br><span class="line">         totalSupply = initialSupply * 10 ** uint256(decimals);</span><br><span class="line">         balanceOf[msg.sender] = totalSupply;</span><br><span class="line">         name = tokenName;</span><br><span class="line">         symbol = tokenSymbol;</span><br><span class="line">     &#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">     function _transfer(address _from, address _to, uint _value) internal &#123;</span><br><span class="line">         require(_to != 0x0);</span><br><span class="line">         require(balanceOf[_from] &gt;= _value);</span><br><span class="line">         require(balanceOf[_to] + _value &gt; balanceOf[_to]);</span><br><span class="line">         uint previousBalances = balanceOf[_from] + balanceOf[_to];</span><br><span class="line">         balanceOf[_from] -= _value;</span><br><span class="line">         balanceOf[_to] += _value;</span><br><span class="line">         Transfer(_from, _to, _value);</span><br><span class="line">         assert(balanceOf[_from] + balanceOf[_to] == previousBalances);</span><br><span class="line">     &#125;</span><br><span class="line"> </span><br><span class="line">     function transfer(address _to, uint256 _value) public returns (bool) &#123;</span><br><span class="line">         _transfer(msg.sender, _to, _value);</span><br><span class="line">         return true;</span><br><span class="line">     &#125;</span><br><span class="line"> </span><br><span class="line">     function transferFrom(address _from, address _to, uint256 _value) public returns (bool success) &#123;</span><br><span class="line">         require(_value &lt;= allowance[_from][msg.sender]);     // Check allowance</span><br><span class="line">         allowance[_from][msg.sender] -= _value;</span><br><span class="line">         _transfer(_from, _to, _value);</span><br><span class="line">         return true;</span><br><span class="line">     &#125;</span><br><span class="line"> </span><br><span class="line">     function approve(address _spender, uint256 _value) public</span><br><span class="line">         returns (bool success) &#123;</span><br><span class="line">         allowance[msg.sender][_spender] = _value;</span><br><span class="line">         return true;</span><br><span class="line">     &#125;</span><br><span class="line"> </span><br><span class="line">     function approveAndCall(address _spender, uint256 _value, bytes _extraData) public returns (bool success) &#123;</span><br><span class="line">         tokenRecipient spender = tokenRecipient(_spender);</span><br><span class="line">         if (approve(_spender, _value)) &#123;</span><br><span class="line">             spender.receiveApproval(msg.sender, _value, this, _extraData);</span><br><span class="line">             return true;</span><br><span class="line">         &#125;</span><br><span class="line">     &#125;</span><br><span class="line"> </span><br><span class="line">     function burn(uint256 _value) public returns (bool success) &#123;</span><br><span class="line">         require(balanceOf[msg.sender] &gt;= _value);</span><br><span class="line">         balanceOf[msg.sender] -= _value;</span><br><span class="line">         totalSupply -= _value;</span><br><span class="line">         Burn(msg.sender, _value);</span><br><span class="line">         return true;</span><br><span class="line">     &#125;</span><br><span class="line"> </span><br><span class="line">     function burnFrom(address _from, uint256 _value) public returns (bool success) &#123;</span><br><span class="line">         require(balanceOf[_from] &gt;= _value);</span><br><span class="line">         require(_value &lt;= allowance[_from][msg.sender]);</span><br><span class="line">         balanceOf[_from] -= _value;</span><br><span class="line">         allowance[_from][msg.sender] -= _value;</span><br><span class="line">         totalSupply -= _value;</span><br><span class="line">         Burn(_from, _value);</span><br><span class="line">         return true;</span><br><span class="line">     &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure><p><img src="http://qiniublog.fplus.top/20200325a04.png" alt="a04"></p><h4 id="选择对应的版本开始编译"><a href="#选择对应的版本开始编译" class="headerlink" title="选择对应的版本开始编译"></a>选择对应的版本开始编译</h4><p><img src="http://qiniublog.fplus.top/20200325a05.png" alt="a05"></p><h4 id="选择环境，这里选的是-Injected-Web3-，会根据你的MetaMask钱包网络显示你的钱包地址及余额，下面部署可以填参数，然后部署。不知道怎么填的可以点右边的箭头下拉出来"><a href="#选择环境，这里选的是-Injected-Web3-，会根据你的MetaMask钱包网络显示你的钱包地址及余额，下面部署可以填参数，然后部署。不知道怎么填的可以点右边的箭头下拉出来" class="headerlink" title="选择环境，这里选的是 Injected Web3 ，会根据你的MetaMask钱包网络显示你的钱包地址及余额，下面部署可以填参数，然后部署。不知道怎么填的可以点右边的箭头下拉出来"></a>选择环境，这里选的是 Injected Web3 ，会根据你的MetaMask钱包网络显示你的钱包地址及余额，下面部署可以填参数，然后部署。不知道怎么填的可以点右边的箭头下拉出来</h4><p><img src="http://qiniublog.fplus.top/20200325a06.png" alt="a06"></p><h4 id="蓝框里第一个参数是发行量，这里填了一个亿，第二个是合约名称，第三个是合约符号，填写完点transact部署，会弹出MetaMask钱包，确认支付后会生成合约地址Deployed-contracts（部署的合同），【点击复制】"><a href="#蓝框里第一个参数是发行量，这里填了一个亿，第二个是合约名称，第三个是合约符号，填写完点transact部署，会弹出MetaMask钱包，确认支付后会生成合约地址Deployed-contracts（部署的合同），【点击复制】" class="headerlink" title="蓝框里第一个参数是发行量，这里填了一个亿，第二个是合约名称，第三个是合约符号，填写完点transact部署，会弹出MetaMask钱包，确认支付后会生成合约地址Deployed contracts（部署的合同），【点击复制】"></a>蓝框里第一个参数是发行量，这里填了一个亿，第二个是合约名称，第三个是合约符号，填写完点transact部署，会弹出MetaMask钱包，确认支付后会生成合约地址Deployed contracts（部署的合同），【点击复制】</h4><p><img src="http://qiniublog.fplus.top/20200325a071.png" alt="a071"><br><img src="http://qiniublog.fplus.top/20200325a072.png" alt="a072"><br><img src="http://qiniublog.fplus.top/20200325a073.png" alt="a073"><br><img src="http://qiniublog.fplus.top/20200325a074.png" alt="a074"><br><img src="http://qiniublog.fplus.top/20200325a075.png" alt="a075"></p><h4 id="在MetaMask钱包点击菜单-gt-添加代币-gt-输入刚复制的合约地址，点击下一步-gt-点击添加代币。就能看到刚发布的一个亿Test。"><a href="#在MetaMask钱包点击菜单-gt-添加代币-gt-输入刚复制的合约地址，点击下一步-gt-点击添加代币。就能看到刚发布的一个亿Test。" class="headerlink" title="在MetaMask钱包点击菜单-&gt;添加代币-&gt;输入刚复制的合约地址，点击下一步-&gt;点击添加代币。就能看到刚发布的一个亿Test。"></a>在MetaMask钱包点击菜单-&gt;添加代币-&gt;输入刚复制的合约地址，点击下一步-&gt;点击添加代币。就能看到刚发布的一个亿Test。</h4>]]></content>
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ETH </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>OctoberCms笔记-Backend-Forms</title>
+      <link href="/2019/05/15/OctoberCms%E7%AC%94%E8%AE%B0-Backend-Forms/"/>
+      <url>/2019/05/15/OctoberCms%E7%AC%94%E8%AE%B0-Backend-Forms/</url>
+      <content type="html"><![CDATA[<h2 id="Backend-Forms"><a href="#Backend-Forms" class="headerlink" title="Backend-Forms"></a>Backend-Forms</h2><h3 id="Record-finder"><a href="#Record-finder" class="headerlink" title="Record finder"></a>Record finder</h3><h4 id="renders-a-field-with-details-of-a-related-record-Expanding-the-field-displays-a-popup-list-to-search-large-amounts-of-records-Supported-by-singular-relationships-only"><a href="#renders-a-field-with-details-of-a-related-record-Expanding-the-field-displays-a-popup-list-to-search-large-amounts-of-records-Supported-by-singular-relationships-only" class="headerlink" title="- renders a field with details of a related record. Expanding the field displays a popup list to search large amounts of records. Supported by singular relationships only."></a>- renders a field with details of a related record. Expanding the field displays a popup list to search large amounts of records. Supported by singular relationships only.</h4><h4 id="呈现包含相关记录详细信息的字段。展开字段会显示一个弹出列表以搜索大量记录。仅受单一关系支持。"><a href="#呈现包含相关记录详细信息的字段。展开字段会显示一个弹出列表以搜索大量记录。仅受单一关系支持。" class="headerlink" title="-呈现包含相关记录详细信息的字段。展开字段会显示一个弹出列表以搜索大量记录。仅受单一关系支持。"></a>-呈现包含相关记录详细信息的字段。展开字段会显示一个弹出列表以搜索大量记录。仅受单一关系支持。</h4><h4 id="可以以某一列表记录的字段作为表单的值"><a href="#可以以某一列表记录的字段作为表单的值" class="headerlink" title="可以以某一列表记录的字段作为表单的值"></a>可以以某一列表记录的字段作为表单的值</h4><h4 id="文档案例"><a href="#文档案例" class="headerlink" title="文档案例"></a>文档案例</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">user:</span><br><span class="line">   label: User</span><br><span class="line">   type: recordfinder</span><br><span class="line">   list: ~/plugins/rainlab/user/models/user/columns.yaml</span><br><span class="line">   recordsPerPage: 10</span><br><span class="line">   title: Find Record</span><br><span class="line">   prompt: Click the Find button to find a user</span><br><span class="line">   keyFrom: id</span><br><span class="line">   nameFrom: name</span><br><span class="line">   descriptionFrom: email</span><br><span class="line">   conditions: email = &quot;bob@example.com&quot;</span><br><span class="line">   scope: whereActive</span><br><span class="line">   searchMode: all</span><br><span class="line">   searchScope: searchUsers</span><br><span class="line">   useRelation: false</span><br><span class="line">   modelClass: RainLab\User\Models\User</span><br></pre></td></tr></table></figure><h4 id="我的案例"><a href="#我的案例" class="headerlink" title="我的案例"></a>我的案例</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">text_id:</span><br><span class="line">    label: 文本素材</span><br><span class="line">    nameFrom: content</span><br><span class="line">    descriptionFrom: description</span><br><span class="line">    list: $/plus/weiphp/models/materialtext/columns.yaml</span><br><span class="line">    span: full</span><br><span class="line">    type: recordfinder</span><br><span class="line">    useRelation: false</span><br><span class="line">    modelClass: Plus\Weiphp\Models\MaterialText</span><br></pre></td></tr></table></figure><h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">useRelationFlag for using the name of the field as a relation name to interact with directly on the parent model. Default: true. Disable to return just the selected model&apos;s ID</span><br><span class="line">modelClassClass of the model to use for listing records when useRelation = false</span><br></pre></td></tr></table></figure><h4 id="我的理解"><a href="#我的理解" class="headerlink" title="我的理解"></a>我的理解</h4><p>我理解的意思是，当两个表关联的字段一样且都存在的时候 useRelation 可以用默认的 true;当不一样的时候，比如我的自定义回复表中的 text_id<br>对应文本素材表的 id 则需要将 useRelation设置为 false,同时要将 modelClass 指向对应的模型</p><h4 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h4><p><img src="http://qiniublog.fplus.top/20190515a01.png" alt="a01"></p><h3 id="Field-options-trigger"><a href="#Field-options-trigger" class="headerlink" title="Field options trigger"></a>Field options trigger</h3><h4 id="specify-conditions-for-this-field-using-trigger-events"><a href="#specify-conditions-for-this-field-using-trigger-events" class="headerlink" title="- specify conditions for this field using trigger events."></a>- specify conditions for this field using trigger events.</h4><h4 id="使用触发器事件指定此字段的条件。"><a href="#使用触发器事件指定此字段的条件。" class="headerlink" title="- 使用触发器事件指定此字段的条件。"></a>- 使用触发器事件指定此字段的条件。</h4><h4 id="其他字段触发本字段做动作"><a href="#其他字段触发本字段做动作" class="headerlink" title="其他字段触发本字段做动作"></a>其他字段触发本字段做动作</h4><h4 id="文档案例-1"><a href="#文档案例-1" class="headerlink" title="文档案例"></a>文档案例</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">is_delayed:</span><br><span class="line">    label: Send later</span><br><span class="line">    comment: Place a tick in this box if you want to send this message at a later time.</span><br><span class="line">    type: checkbox</span><br><span class="line"></span><br><span class="line">send_at:</span><br><span class="line">    label: Send date</span><br><span class="line">    type: datepicker</span><br><span class="line">    cssClass: field-indent</span><br><span class="line">    trigger:</span><br><span class="line">        action: show</span><br><span class="line">        field: is_delayed</span><br><span class="line">        condition: checked</span><br></pre></td></tr></table></figure><h4 id="我的案例-1"><a href="#我的案例-1" class="headerlink" title="我的案例"></a>我的案例</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">msg_type:</span><br><span class="line">    label: 选择类型</span><br><span class="line">    options:</span><br><span class="line">        text: 文本</span><br><span class="line">        img: 图片</span><br><span class="line">        news: 图文</span><br><span class="line">        voice: 语音</span><br><span class="line">        video: 视频</span><br><span class="line">    span: full</span><br><span class="line">    type: radio</span><br><span class="line">text_id:</span><br><span class="line">    label: 文本素材</span><br><span class="line">    nameFrom: content</span><br><span class="line">    descriptionFrom: description</span><br><span class="line">    list: $/plus/weiphp/models/materialtext/columns.yaml</span><br><span class="line">    span: full</span><br><span class="line">    type: recordfinder</span><br><span class="line">    useRelation: false</span><br><span class="line">    modelClass: Plus\Weiphp\Models\MaterialText</span><br><span class="line">    trigger:</span><br><span class="line">        action: show</span><br><span class="line">        field: msg_type</span><br><span class="line">        condition: value[text]</span><br><span class="line">img_id:</span><br><span class="line">    label: 图片素材</span><br><span class="line">    nameFrom: content</span><br><span class="line">    descriptionFrom: description</span><br><span class="line">    list: $/plus/weiphp/models/materialimage/columns.yaml</span><br><span class="line">    span: full</span><br><span class="line">    type: recordfinder</span><br><span class="line">    useRelation: false</span><br><span class="line">    modelClass: Plus\Weiphp\Models\MaterialImage</span><br><span class="line">    trigger:</span><br><span class="line">        action: show</span><br><span class="line">        field: msg_type</span><br><span class="line">        condition: value[img]</span><br></pre></td></tr></table></figure><h4 id="注意事项-Trigger-events"><a href="#注意事项-Trigger-events" class="headerlink" title="注意事项 Trigger events"></a>注意事项 Trigger events</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">OptionDescription</span><br><span class="line">actiondefines the action applied to this field when the condition is met. Supported values: show, hide, enable, disable, empty.</span><br><span class="line">fielddefines the other field name that will trigger the action. Normally the field name refers to a field in the same level form. For example, if this field is in a repeater widget, only fields in that same repeater widget will be checked. However, if the field name is preceded by a caret symbol ^ like: ^parent_field, it will refer to a repeater widget or form one level higher than the field itself. Additionally, if more than one caret ^ is used, it will refer that many levels higher: ^^grand_parent_field, ^^^grand_grand_parent_field, etc.</span><br><span class="line">conditiondetermines the condition the specified field should satisfy for the condition to be considered &quot;true&quot;. Supported values: checked, unchecked, value[somevalue].</span><br></pre></td></tr></table></figure><h4 id="我的理解-1"><a href="#我的理解-1" class="headerlink" title="我的理解"></a>我的理解</h4><p>当 field 这个字段 达到某种条件或值 也就是 condition 时 ，对应的这个字段将做 action 这样的动作; 如果 action 设成 show 的话，默认是不显示的。</p><h4 id="效果展示-1"><a href="#效果展示-1" class="headerlink" title="效果展示"></a>效果展示</h4><p><img src="http://qiniublog.fplus.top/20190515a02.png" alt="a02"></p>]]></content>
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习 </tag>
+            
+            <tag> laravel </tag>
+            
+            <tag> OctoberCms </tag>
+            
+            <tag> oct-Backend </tag>
+            
+            <tag> oct-Backend-Forms </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>OctoberCms学习4-基本概念</title>
+      <link href="/2018/12/25/OctoberCms%E5%AD%A6%E4%B9%A04-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"/>
+      <url>/2018/12/25/OctoberCms%E5%AD%A6%E4%B9%A04-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</url>
+      <content type="html"><![CDATA[<h2 id="基本概念及demo分析"><a href="#基本概念及demo分析" class="headerlink" title="基本概念及demo分析"></a>基本概念及demo分析</h2><h3 id="在October系统中所构建的每一个页面都是由Layout（布局）、Page（页面）、Partials（部件）和Content-blocks（内容块）组成。最简单的情况就是只有一个Page也是可以的。"><a href="#在October系统中所构建的每一个页面都是由Layout（布局）、Page（页面）、Partials（部件）和Content-blocks（内容块）组成。最简单的情况就是只有一个Page也是可以的。" class="headerlink" title="在October系统中所构建的每一个页面都是由Layout（布局）、Page（页面）、Partials（部件）和Content blocks（内容块）组成。最简单的情况就是只有一个Page也是可以的。"></a>在October系统中所构建的每一个页面都是由Layout（布局）、Page（页面）、Partials（部件）和Content blocks（内容块）组成。最简单的情况就是只有一个Page也是可以的。</h3><h3 id="首页"><a href="#首页" class="headerlink" title="首页"></a>首页</h3><p><img src="http://qiniublog.fplus.top/20181225a01.png" alt="a01"></p><h4 id="每个页面都有的顶部和底部作为布局"><a href="#每个页面都有的顶部和底部作为布局" class="headerlink" title="每个页面都有的顶部和底部作为布局"></a>每个页面都有的顶部和底部作为布局</h4><p>#### </p><h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p><img src="http://qiniublog.fplus.top/20181225a02.png" alt="a02"></p><h4 id="ing"><a href="#ing" class="headerlink" title="ing"></a>ing</h4><h3 id="产品展示"><a href="#产品展示" class="headerlink" title="产品展示"></a>产品展示</h3><p><img src="http://qiniublog.fplus.top/20181225a03.png" alt="a03"></p><h4 id="ing-1"><a href="#ing-1" class="headerlink" title="ing"></a>ing</h4><h3 id="客户案例"><a href="#客户案例" class="headerlink" title="客户案例"></a>客户案例</h3><p><img src="http://qiniublog.fplus.top/20181225a04.png" alt="a04"></p><h4 id="ing-2"><a href="#ing-2" class="headerlink" title="ing"></a>ing</h4><h3 id="服务中心"><a href="#服务中心" class="headerlink" title="服务中心"></a>服务中心</h3><p><img src="http://qiniublog.fplus.top/20181225a05.png" alt="a05"></p><h4 id="ing-3"><a href="#ing-3" class="headerlink" title="ing"></a>ing</h4><h3 id="新闻动态"><a href="#新闻动态" class="headerlink" title="新闻动态"></a>新闻动态</h3><p><img src="http://qiniublog.fplus.top/20181225a06.png" alt="a06"></p><h4 id="ing-4"><a href="#ing-4" class="headerlink" title="ing"></a>ing</h4><h3 id="关于我们"><a href="#关于我们" class="headerlink" title="关于我们"></a>关于我们</h3><p><img src="http://qiniublog.fplus.top/20181225a07.png" alt="a07"></p><h4 id="ing-5"><a href="#ing-5" class="headerlink" title="ing"></a>ing</h4><h3 id="招贤纳士"><a href="#招贤纳士" class="headerlink" title="招贤纳士"></a>招贤纳士</h3><p><img src="http://qiniublog.fplus.top/20181225a08.png" alt="a08"></p><h4 id="ing-6"><a href="#ing-6" class="headerlink" title="ing"></a>ing</h4><h3 id="解决方案详情"><a href="#解决方案详情" class="headerlink" title="解决方案详情"></a>解决方案详情</h3><p><img src="http://qiniublog.fplus.top/20181225a09.png" alt="a09"></p><h4 id="ing-7"><a href="#ing-7" class="headerlink" title="ing"></a>ing</h4><h3 id="案例详情"><a href="#案例详情" class="headerlink" title="案例详情"></a>案例详情</h3><p><img src="http://qiniublog.fplus.top/20181225a10.png" alt="a10"></p><h4 id="ing-8"><a href="#ing-8" class="headerlink" title="ing"></a>ing</h4><h3 id="新闻详情"><a href="#新闻详情" class="headerlink" title="新闻详情"></a>新闻详情</h3><p><img src="http://qiniublog.fplus.top/20181225a11.png" alt="a11"></p><h4 id="ing-9"><a href="#ing-9" class="headerlink" title="ing"></a>ing</h4>]]></content>
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习 </tag>
+            
+            <tag> laravel </tag>
+            
+            <tag> OctoberCms </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>OctoberCms学习3-主题</title>
+      <link href="/2018/12/20/OctoberCms%E5%AD%A6%E4%B9%A03-%E4%B8%BB%E9%A2%98/"/>
+      <url>/2018/12/20/OctoberCms%E5%AD%A6%E4%B9%A03-%E4%B8%BB%E9%A2%98/</url>
+      <content type="html"><![CDATA[<h2 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h2><h3 id="设置-前台主题-创建空白主题"><a href="#设置-前台主题-创建空白主题" class="headerlink" title="设置-前台主题-创建空白主题"></a>设置-前台主题-创建空白主题</h3><p><img src="http://qiniublog.fplus.top/20181220a01.png" alt="a01"></p><h4 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h4><p><img src="http://qiniublog.fplus.top/20181220a02.png" alt="a02"></p><h4 id="激活"><a href="#激活" class="headerlink" title="激活"></a>激活</h4><p><img src="http://qiniublog.fplus.top/20181220a03.png" alt="a03"></p><h3 id="下载静态模板"><a href="#下载静态模板" class="headerlink" title="下载静态模板"></a><a href="http://www.jqueryfuns.com/resource/3091" target="_blank" rel="noopener">下载静态模板</a></h3><p><img src="http://qiniublog.fplus.top/20181220a04.png" alt="a04"></p><h4 id="将js、css、img等放到资源目录assets"><a href="#将js、css、img等放到资源目录assets" class="headerlink" title="将js、css、img等放到资源目录assets"></a>将js、css、img等放到资源目录assets</h4><p><img src="http://qiniublog.fplus.top/20181220a05.png" alt="a05"></p>]]></content>
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习 </tag>
+            
+            <tag> laravel </tag>
+            
+            <tag> OctoberCms </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>OctoberCms学习2-常用插件</title>
+      <link href="/2018/12/10/OctoberCms%E5%AD%A6%E4%B9%A02-%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6/"/>
+      <url>/2018/12/10/OctoberCms%E5%AD%A6%E4%B9%A02-%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6/</url>
+      <content type="html"><![CDATA[<h2 id="常用插件"><a href="#常用插件" class="headerlink" title="常用插件"></a>常用插件</h2><h3 id="设置-更新-安装插件"><a href="#设置-更新-安装插件" class="headerlink" title="设置-更新-安装插件"></a>设置-更新-安装插件</h3><p><img src="http://qiniublog.fplus.top/20181210b01.png" alt="b01"></p><h4 id="点击插件直接下载安装"><a href="#点击插件直接下载安装" class="headerlink" title="点击插件直接下载安装"></a>点击插件直接下载安装</h4><p><img src="http://qiniublog.fplus.top/20181210b02.png" alt="b02"></p><h3 id="常用插件-1"><a href="#常用插件-1" class="headerlink" title="常用插件"></a>常用插件</h3><h4 id="Builder"><a href="#Builder" class="headerlink" title="Builder"></a>Builder</h4><p><img src="http://qiniublog.fplus.top/20181210b03.png" alt="b03"></p><h4 id="Static-Pages"><a href="#Static-Pages" class="headerlink" title="Static Pages"></a>Static Pages</h4><p><img src="http://qiniublog.fplus.top/20181210b04.png" alt="b04"></p><h4 id="Slideshow"><a href="#Slideshow" class="headerlink" title="Slideshow"></a>Slideshow</h4><p><img src="http://qiniublog.fplus.top/20181210b05.png" alt="b05"></p><h4 id="TemplateTokens"><a href="#TemplateTokens" class="headerlink" title="TemplateTokens"></a>TemplateTokens</h4><p><img src="http://qiniublog.fplus.top/20181210b06.png" alt="b06"></p>]]></content>
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习 </tag>
+            
+            <tag> laravel </tag>
+            
+            <tag> OctoberCms </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>OctoberCms学习1-安装</title>
+      <link href="/2018/12/10/OctoberCms%E5%AD%A6%E4%B9%A01-%E5%AE%89%E8%A3%85/"/>
+      <url>/2018/12/10/OctoberCms%E5%AD%A6%E4%B9%A01-%E5%AE%89%E8%A3%85/</url>
+      <content type="html"><![CDATA[<h2 id="安装"><a href="#安装" class="headerlink" title="安装 "></a>安装 </h2><h5 id="感谢Tianby"><a href="#感谢Tianby" class="headerlink" title="感谢Tianby"></a>感谢<a href="https://segmentfault.com/u/raiseinfo/activities" target="_blank" rel="noopener">Tianby</a></h5><h3 id="向导安装"><a href="#向导安装" class="headerlink" title="向导安装"></a>向导安装</h3><h4 id="下载安装程序归档文件"><a href="#下载安装程序归档文件" class="headerlink" title="下载安装程序归档文件"></a><a href="http://octobercms.com/download" target="_blank" rel="noopener">下载安装程序归档文件</a></h4><p><img src="http://qiniublog.fplus.top/20181210a01.png" alt="a01"></p><h4 id="注意配置后台访问地址"><a href="#注意配置后台访问地址" class="headerlink" title="注意配置后台访问地址"></a>注意配置后台访问地址</h4><p><img src="http://qiniublog.fplus.top/20181210a02.png" alt="a02"></p><h4 id="提前创建对应的数据库"><a href="#提前创建对应的数据库" class="headerlink" title="提前创建对应的数据库"></a>提前创建对应的数据库</h4><p><img src="http://qiniublog.fplus.top/20181210a03.png" alt="a03"></p><h4 id="选第一个“白手起家”进行安装"><a href="#选第一个“白手起家”进行安装" class="headerlink" title="选第一个“白手起家”进行安装"></a>选第一个“白手起家”进行安装</h4><p><img src="http://qiniublog.fplus.top/20181210a04.png" alt="a04"></p><h3 id="删除安装文件"><a href="#删除安装文件" class="headerlink" title="删除安装文件"></a>删除安装文件</h3><p><img src="http://qiniublog.fplus.top/20181210a05.png" alt="a05"></p><h3 id="选择简体中文"><a href="#选择简体中文" class="headerlink" title="选择简体中文"></a>选择简体中文</h3><h4 id="点击右上角的用户图标，选择“Back-end-preferences”"><a href="#点击右上角的用户图标，选择“Back-end-preferences”" class="headerlink" title="点击右上角的用户图标，选择“Back-end preferences”"></a>点击右上角的用户图标，选择“Back-end preferences”</h4><p><img src="http://qiniublog.fplus.top/20181210a06.png" alt="a06"></p><h4 id="选择-简体中文-和-UTC-8-Asia-Shanghai"><a href="#选择-简体中文-和-UTC-8-Asia-Shanghai" class="headerlink" title="选择 简体中文 和 UTC+8 Asia/Shanghai"></a>选择 简体中文 和 UTC+8 Asia/Shanghai</h4><p><img src="http://qiniublog.fplus.top/20181210a07.png" alt="a07"></p>]]></content>
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习 </tag>
+            
+            <tag> laravel </tag>
+            
+            <tag> OctoberCms </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>博客图片用七牛云</title>
+      <link href="/2018/11/07/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E7%94%A8%E4%B8%83%E7%89%9B%E4%BA%91/"/>
+      <url>/2018/11/07/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E7%94%A8%E4%B8%83%E7%89%9B%E4%BA%91/</url>
+      <content type="html"><![CDATA[<h2 id="博客图片用七牛云"><a href="#博客图片用七牛云" class="headerlink" title="博客图片用七牛云"></a>博客图片用七牛云</h2><h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><h4 id="如下图保存图片，最好用-png-日期为文件夹-a-z代表今天的不同博客"><a href="#如下图保存图片，最好用-png-日期为文件夹-a-z代表今天的不同博客" class="headerlink" title="如下图保存图片，最好用.png,日期为文件夹,a-z代表今天的不同博客"></a>如下图保存图片，最好用.png,日期为文件夹,a-z代表今天的不同博客</h4><p><img src="http://qiniublog.fplus.top/20181107a01.png" alt="a01"></p><h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><h4 id="七牛云文件同步工具-gt-高级设置-以日期为前缀-注意勾选检测新增文件"><a href="#七牛云文件同步工具-gt-高级设置-以日期为前缀-注意勾选检测新增文件" class="headerlink" title="七牛云文件同步工具 &gt; 高级设置.以日期为前缀.注意勾选检测新增文件"></a>七牛云文件同步工具 &gt; 高级设置.以日期为前缀.注意勾选检测新增文件</h4><p><img src="http://qiniublog.fplus.top/20181107a02.png" alt="a02"></p><h3 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h3><h4 id="七牛云文件同步工具-gt-基本设置"><a href="#七牛云文件同步工具-gt-基本设置" class="headerlink" title="七牛云文件同步工具 &gt; 基本设置."></a>七牛云文件同步工具 &gt; 基本设置.</h4><p><img src="http://qiniublog.fplus.top/20181107a03.png" alt="a03"></p><h3 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h3><h4 id="博客中调用"><a href="#博客中调用" class="headerlink" title="博客中调用."></a>博客中调用.</h4><p><img src="http://qiniublog.fplus.top/20181107a04.png" alt="a04"></p>]]></content>
+      
+      <categories>
+          
+          <category> 其他 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 七牛 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>博客链接</title>
+      <link href="/2018/10/09/bloglinks/"/>
+      <url>/2018/10/09/bloglinks/</url>
+      <content type="html"><![CDATA[<h2 id="PS"><a href="#PS" class="headerlink" title="PS"></a>PS</h2><h3 id="ps如何快速批量转换图片格式"><a href="#ps如何快速批量转换图片格式" class="headerlink" title="ps如何快速批量转换图片格式"></a><a href="https://jingyan.baidu.com/article/ed15cb1bbf1f5b1be36981c9.html" target="_blank" rel="noopener">ps如何快速批量转换图片格式</a></h3><h2 id="md"><a href="#md" class="headerlink" title=".md"></a>.md</h2><h3 id="md即markdown文件的基本常用编写语法（图文并茂）"><a href="#md即markdown文件的基本常用编写语法（图文并茂）" class="headerlink" title=".md即markdown文件的基本常用编写语法（图文并茂）"></a><a href="https://www.cnblogs.com/liugang-vip/p/6337580.html" target="_blank" rel="noopener">.md即markdown文件的基本常用编写语法（图文并茂）</a></h3><h2 id="win10"><a href="#win10" class="headerlink" title="win10"></a>win10</h2><h3 id="Win10修改编辑hosts文件无法保存怎么办"><a href="#Win10修改编辑hosts文件无法保存怎么办" class="headerlink" title="Win10修改编辑hosts文件无法保存怎么办"></a><a href="https://jingyan.baidu.com/article/624e7459b194f134e8ba5a8e.html" target="_blank" rel="noopener">Win10修改编辑hosts文件无法保存怎么办</a></h3><h2 id="mysql"><a href="#mysql" class="headerlink" title="mysql"></a>mysql</h2><h3 id="mysql-服务器启用event-scheduler"><a href="#mysql-服务器启用event-scheduler" class="headerlink" title="mysql 服务器启用event_scheduler"></a><a href="https://blog.csdn.net/yangzefei1991/article/details/51800867" target="_blank" rel="noopener">mysql 服务器启用event_scheduler</a></h3><h3 id="MYSQL存储过程发生Result-consisted-of-more-than-one-r…解决"><a href="#MYSQL存储过程发生Result-consisted-of-more-than-one-r…解决" class="headerlink" title="MYSQL存储过程发生Result consisted of more than one r…解决"></a><a href="https://www.2cto.com/database/201309/246947.html" target="_blank" rel="noopener">MYSQL存储过程发生Result consisted of more than one r…解决</a></h3><h3 id="MySQL函数大全及用法示例"><a href="#MySQL函数大全及用法示例" class="headerlink" title="MySQL函数大全及用法示例"></a><a href="https://www.cnblogs.com/xuyulin/p/5468102.html" target="_blank" rel="noopener">MySQL函数大全及用法示例</a></h3><h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><h3 id="GitHub-push文件失败时"><a href="#GitHub-push文件失败时" class="headerlink" title="GitHub push文件失败时"></a><a href="https://blog.csdn.net/sinat_32873711/article/details/59189497" target="_blank" rel="noopener">GitHub push文件失败时</a></h3><h2 id="X-editable"><a href="#X-editable" class="headerlink" title="X-editable"></a>X-editable</h2><h3 id="X-editable-1"><a href="#X-editable-1" class="headerlink" title="X-editable"></a><a href="http://vitalets.github.io/x-editable/" target="_blank" rel="noopener">X-editable</a></h3><h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h2><h3 id="Linux（CentOS）安装Node-JS和npm的两种方式（yum安装和源码安装）"><a href="#Linux（CentOS）安装Node-JS和npm的两种方式（yum安装和源码安装）" class="headerlink" title="Linux（CentOS）安装Node.JS和npm的两种方式（yum安装和源码安装）"></a><a href="https://blog.csdn.net/abcdefg2343/article/details/81355002" target="_blank" rel="noopener">Linux（CentOS）安装Node.JS和npm的两种方式（yum安装和源码安装）</a></h3><h2 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h2><h3 id="手动安装Android-Support-Library-23-0-1"><a href="#手动安装Android-Support-Library-23-0-1" class="headerlink" title="手动安装Android Support Library(23.0.1)"></a><a href="https://www.cnblogs.com/zhiyingzhou/p/7168452.html?utm_source=itdadao&amp;utm_medium=referral" target="_blank" rel="noopener">手动安装Android Support Library(23.0.1)</a></h3><h2 id="WebSocket"><a href="#WebSocket" class="headerlink" title="WebSocket"></a>WebSocket</h2><h3 id="WebSocket-学习-三-–用nodejs搭建服务器"><a href="#WebSocket-学习-三-–用nodejs搭建服务器" class="headerlink" title="WebSocket 学习(三)–用nodejs搭建服务器"></a><a href="https://www.cnblogs.com/stoneniqiu/p/5402311.html" target="_blank" rel="noopener">WebSocket 学习(三)–用nodejs搭建服务器</a></h3>]]></content>
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>npm的镜像替换成淘宝</title>
+      <link href="/2018/09/05/npm%E7%9A%84%E9%95%9C%E5%83%8F%E6%9B%BF%E6%8D%A2%E6%88%90%E6%B7%98%E5%AE%9D/"/>
+      <url>/2018/09/05/npm%E7%9A%84%E9%95%9C%E5%83%8F%E6%9B%BF%E6%8D%A2%E6%88%90%E6%B7%98%E5%AE%9D/</url>
+      <content type="html"><![CDATA[<h3 id="得到原本的镜像地址"><a href="#得到原本的镜像地址" class="headerlink" title="得到原本的镜像地址"></a>得到原本的镜像地址</h3><p><code>npm get registry</code></p><p><code>&gt; https://registry.npmjs.org/</code></p><h3 id="设成淘宝的"><a href="#设成淘宝的" class="headerlink" title="设成淘宝的"></a>设成淘宝的</h3><p><code>npm config set registry http://registry.npm.taobao.org/</code></p><h3 id="换成原来的"><a href="#换成原来的" class="headerlink" title="换成原来的"></a>换成原来的</h3><p><code>npm config set registry https://registry.npmjs.org/</code></p>]]></content>
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习 </tag>
+            
+            <tag> npm </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Invalid default value-for &#39;created_at&#39;</title>
+      <link href="/2018/08/21/Invalid-default-value-for-created-at/"/>
+      <url>/2018/08/21/Invalid-default-value-for-created-at/</url>
+      <content type="html"><![CDATA[<p>可以直接修改my.ini文件</p><p>在[mysqld]下面添加如下列：</p><p><code>sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES</code>              </p>]]></content>
+      
+      <categories>
+          
+          <category> 其他 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 坑 </tag>
+            
+            <tag> mysql </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>数据库迁移可用的字段类型</title>
+      <link href="/2018/08/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%81%E7%A7%BB%E5%8F%AF%E7%94%A8%E7%9A%84%E5%AD%97%E6%AE%B5%E7%B1%BB%E5%9E%8B/"/>
+      <url>/2018/08/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%81%E7%A7%BB%E5%8F%AF%E7%94%A8%E7%9A%84%E5%AD%97%E6%AE%B5%E7%B1%BB%E5%9E%8B/</url>
+      <content type="html"><![CDATA[<h3 id="数据库结构生成器包含构建表时可以指定的各种字段类型："><a href="#数据库结构生成器包含构建表时可以指定的各种字段类型：" class="headerlink" title="数据库结构生成器包含构建表时可以指定的各种字段类型："></a>数据库结构生成器包含构建表时可以指定的各种字段类型：</h3><table><thead><tr><th style="text-align:left">命令</th><th style="text-align:left">描述</th></tr></thead><tbody><tr><td style="text-align:left"><code>$table-&gt;bigIncrements(&#39;id&#39;);</code></td><td style="text-align:left">递增 ID（主键），相当于「UNSIGNED BIG INTEGER」</td></tr><tr><td style="text-align:left"><code>$table-&gt;bigInteger(&#39;votes&#39;);</code></td><td style="text-align:left">相当于 BIGINT</td></tr><tr><td style="text-align:left"><code>$table-&gt;binary(&#39;data&#39;);</code></td><td style="text-align:left">相当于 BLOB</td></tr><tr><td style="text-align:left"><code>$table-&gt;boolean(&#39;confirmed&#39;);</code></td><td style="text-align:left">相当于 BOOLEAN</td></tr><tr><td style="text-align:left"><code>$table-&gt;char(&#39;name&#39;, 4);</code></td><td style="text-align:left">相当于带有长度的 CHAR</td></tr><tr><td style="text-align:left"><code>$table-&gt;date(&#39;created_at&#39;);</code></td><td style="text-align:left">相当于 DATE</td></tr><tr><td style="text-align:left"><code>$table-&gt;dateTime(&#39;created_at&#39;);</code></td><td style="text-align:left">相当于 DATETIME</td></tr><tr><td style="text-align:left"><code>$table-&gt;dateTimeTz(&#39;created_at&#39;);</code></td><td style="text-align:left">相当于带时区 DATETIME</td></tr><tr><td style="text-align:left"><code>$table-&gt;decimal(&#39;amount&#39;, 8, 2);</code></td><td style="text-align:left">相当于带有精度与基数 DECIMAL</td></tr><tr><td style="text-align:left"><code>$table-&gt;double(&#39;column&#39;, 8, 2);</code></td><td style="text-align:left">相当于带有精度与基数 DOUBLE</td></tr><tr><td style="text-align:left"><code>$table-&gt;enum(&#39;level&#39;, [&#39;easy&#39;, &#39;hard&#39;]);</code></td><td style="text-align:left">相当于 ENUM</td></tr><tr><td style="text-align:left"><code>$table-&gt;float(&#39;amount&#39;, 8, 2);</code></td><td style="text-align:left">相当于带有精度与基数 FLOAT</td></tr><tr><td style="text-align:left"><code>$table-&gt;geometry(&#39;positions&#39;);</code></td><td style="text-align:left">相当于 GEOMETRY</td></tr><tr><td style="text-align:left"><code>$table-&gt;geometryCollection(&#39;positions&#39;);</code></td><td style="text-align:left">相当于 GEOMETRYCOLLECTION</td></tr><tr><td style="text-align:left"><code>$table-&gt;increments(&#39;id&#39;);</code></td><td style="text-align:left">递增的 ID (主键)，相当于「UNSIGNED INTEGER」</td></tr><tr><td style="text-align:left"><code>$table-&gt;integer(&#39;votes&#39;);</code></td><td style="text-align:left">相当于 INTEGER</td></tr><tr><td style="text-align:left"><code>$table-&gt;ipAddress(&#39;visitor&#39;);</code></td><td style="text-align:left">相当于 IP 地址</td></tr><tr><td style="text-align:left"><code>$table-&gt;json(&#39;options&#39;);</code></td><td style="text-align:left">相当于 JSON</td></tr><tr><td style="text-align:left"><code>$table-&gt;jsonb(&#39;options&#39;);</code></td><td style="text-align:left">相当于 JSONB</td></tr><tr><td style="text-align:left"><code>$table-&gt;lineString(&#39;positions&#39;);</code></td><td style="text-align:left">相当于 LINESTRING</td></tr><tr><td style="text-align:left"><code>$table-&gt;longText(&#39;description&#39;);</code></td><td style="text-align:left">相当于 LONGTEXT</td></tr><tr><td style="text-align:left"><code>$table-&gt;macAddress(&#39;device&#39;);</code></td><td style="text-align:left">相当于 MAC 地址</td></tr><tr><td style="text-align:left"><code>$table-&gt;mediumIncrements(&#39;id&#39;);</code></td><td style="text-align:left">递增 ID (主键) ，相当于「UNSIGNED MEDIUM INTEGER」</td></tr><tr><td style="text-align:left"><code>$table-&gt;mediumInteger(&#39;votes&#39;);</code></td><td style="text-align:left">相当于 MEDIUMINT</td></tr><tr><td style="text-align:left"><code>$table-&gt;mediumText(&#39;description&#39;);</code></td><td style="text-align:left">相当于 MEDIUMTEXT</td></tr><tr><td style="text-align:left"><code>$table-&gt;morphs(&#39;taggable&#39;);</code></td><td style="text-align:left">相当于加入递增的 taggable_id 与字符串 taggable_type</td></tr><tr><td style="text-align:left"><code>$table-&gt;multiLineString(&#39;positions&#39;);</code></td><td style="text-align:left">相当于 MULTILINESTRING</td></tr><tr><td style="text-align:left"><code>$table-&gt;multiPoint(&#39;positions&#39;);</code></td><td style="text-align:left">相当于 MULTIPOINT</td></tr><tr><td style="text-align:left"><code>$table-&gt;multiPolygon(&#39;positions&#39;);</code></td><td style="text-align:left">相当于 MULTIPOLYGON</td></tr><tr><td style="text-align:left"><code>$table-&gt;nullableMorphs(&#39;taggable&#39;);</code></td><td style="text-align:left">相当于可空版本的 morphs() 字段</td></tr><tr><td style="text-align:left"><code>$table-&gt;nullableTimestamps();</code></td><td style="text-align:left">相当于可空版本的 timestamps() 字段</td></tr><tr><td style="text-align:left"><code>$table-&gt;point(&#39;position&#39;);</code></td><td style="text-align:left">相当于 POINT</td></tr><tr><td style="text-align:left"><code>$table-&gt;polygon(&#39;positions&#39;);</code></td><td style="text-align:left">相当于 POLYGON</td></tr><tr><td style="text-align:left"><code>$table-&gt;rememberToken();</code></td><td style="text-align:left">相当于可空版本的 VARCHAR(100) 的 remember_token 字段</td></tr><tr><td style="text-align:left"><code>$table-&gt;smallIncrements(&#39;id&#39;);</code></td><td style="text-align:left">递增 ID (主键) ，相当于「UNSIGNED SMALL INTEGER」</td></tr><tr><td style="text-align:left"><code>$table-&gt;smallInteger(&#39;votes&#39;);</code></td><td style="text-align:left">相当于 SMALLINT</td></tr><tr><td style="text-align:left"><code>$table-&gt;softDeletes();</code></td><td style="text-align:left">相当于为软删除添加一个可空的 deleted_at 字段</td></tr><tr><td style="text-align:left"><code>$table-&gt;softDeletesTz();</code></td><td style="text-align:left">相当于为软删除添加一个可空的 带时区的 deleted_at 字段</td></tr><tr><td style="text-align:left"><code>$table-&gt;string(&#39;name&#39;, 100);</code></td><td style="text-align:left">相当于带长度的 VARCHAR</td></tr><tr><td style="text-align:left"><code>$table-&gt;text(&#39;description&#39;);</code></td><td style="text-align:left">相当于 TEXT</td></tr><tr><td style="text-align:left"><code>$table-&gt;time(&#39;sunrise&#39;);</code></td><td style="text-align:left">相当于 TIME</td></tr><tr><td style="text-align:left"><code>$table-&gt;timeTz(&#39;sunrise&#39;);</code></td><td style="text-align:left">相当于带时区的 TIME</td></tr><tr><td style="text-align:left"><code>$table-&gt;timestamp(&#39;added_on&#39;);</code></td><td style="text-align:left">相当于 TIMESTAMP</td></tr><tr><td style="text-align:left"><code>$table-&gt;timestampTz(&#39;added_on&#39;);</code></td><td style="text-align:left">相当于带时区的 TIMESTAMP</td></tr><tr><td style="text-align:left"><code>$table-&gt;tinyIncrements(&#39;id&#39;);</code></td><td style="text-align:left">相当于自动递增 UNSIGNED TINYINT</td></tr><tr><td style="text-align:left"><code>$table-&gt;tinyInteger(&#39;votes&#39;);</code></td><td style="text-align:left">相当于 TINYINT</td></tr><tr><td style="text-align:left"><code>$table-&gt;unsignedBigInteger(&#39;votes&#39;);</code></td><td style="text-align:left">相当于 Unsigned BIGINT</td></tr><tr><td style="text-align:left"><code>$table-&gt;unsignedDecimal(&#39;amount&#39;, 8, 2);</code></td><td style="text-align:left">相当于带有精度和基数的 UNSIGNED DECIMAL</td></tr><tr><td style="text-align:left"><code>$table-&gt;unsignedInteger(&#39;votes&#39;);</code></td><td style="text-align:left">相当于 Unsigned INT</td></tr><tr><td style="text-align:left"><code>$table-&gt;unsignedMediumInteger(&#39;votes&#39;);</code></td><td style="text-align:left">相当于 Unsigned MEDIUMINT</td></tr><tr><td style="text-align:left"><code>$table-&gt;unsignedSmallInteger(&#39;votes&#39;);</code></td><td style="text-align:left">相当于 Unsigned SMALLINT</td></tr><tr><td style="text-align:left"><code>$table-&gt;unsignedTinyInteger(&#39;votes&#39;);</code></td><td style="text-align:left">相当于 Unsigned TINYINT</td></tr><tr><td style="text-align:left"><code>$table-&gt;uuid(&#39;id&#39;);</code></td><td style="text-align:left">相当于 UUID</td></tr><tr><td style="text-align:left"><code>$table-&gt;year(&#39;birth_year&#39;);</code></td><td style="text-align:left">相当于 YEAR</td></tr></tbody></table>]]></content>
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习 </tag>
+            
+            <tag> laravel </tag>
+            
+            <tag> 数据库迁移 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>PhpStorm去掉函数参数提示</title>
+      <link href="/2018/07/05/PhpStorm%E5%8E%BB%E6%8E%89%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E6%8F%90%E7%A4%BA/"/>
+      <url>/2018/07/05/PhpStorm%E5%8E%BB%E6%8E%89%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E6%8F%90%E7%A4%BA/</url>
+      <content type="html"><![CDATA[<h2 id="PhpStorm去掉函数参数提示"><a href="#PhpStorm去掉函数参数提示" class="headerlink" title="PhpStorm去掉函数参数提示"></a>PhpStorm去掉函数参数提示</h2><h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><h4 id="File-gt-Settings"><a href="#File-gt-Settings" class="headerlink" title="File &gt; Settings"></a>File &gt; Settings</h4><p><img src="http://qiniublog.fplus.top/20180705a01.png" alt="a01"></p><h4 id="路径-Editor-gt-General-gt-Appearance-gt-Show-parameter-name-hits"><a href="#路径-Editor-gt-General-gt-Appearance-gt-Show-parameter-name-hits" class="headerlink" title="路径 Editor &gt; General &gt; Appearance &gt; Show parameter name hits"></a>路径 Editor &gt; General &gt; Appearance &gt; Show parameter name hits</h4><p>去掉勾选<br><img src="http://qiniublog.fplus.top/20180705a02.png" alt="a02"></p><h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><h4 id="在代码显示的参数名上方右键点击-选择-Disable-就可以关闭了"><a href="#在代码显示的参数名上方右键点击-选择-Disable-就可以关闭了" class="headerlink" title="在代码显示的参数名上方右键点击, 选择 Disable 就可以关闭了"></a>在代码显示的参数名上方右键点击, 选择 Disable 就可以关闭了</h4><p><img src="http://qiniublog.fplus.top/20180705a03.png" alt="a03"></p><h3 id="这里是-参考文献"><a href="#这里是-参考文献" class="headerlink" title="这里是 参考文献"></a>这里是 <a href="https://segmentfault.com/a/1190000010747322" title="别人的博客" target="_blank" rel="noopener">参考文献</a></h3>]]></content>
+      
+      <categories>
+          
+          <category> 其他 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> PhpStorm </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Laravel学习杂记</title>
+      <link href="/2018/07/04/Laravel%E5%AD%A6%E4%B9%A0%E6%9D%82%E8%AE%B0/"/>
+      <url>/2018/07/04/Laravel%E5%AD%A6%E4%B9%A0%E6%9D%82%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<h2 id="记录laravel学习时的关键词、命令、问题等，帮助记忆。"><a href="#记录laravel学习时的关键词、命令、问题等，帮助记忆。" class="headerlink" title="记录laravel学习时的关键词、命令、问题等，帮助记忆。"></a>记录laravel学习时的关键词、命令、问题等，帮助记忆。</h2><h5 id="在单个命令中回滚-amp-迁移"><a href="#在单个命令中回滚-amp-迁移" class="headerlink" title="在单个命令中回滚 &amp; 迁移"></a>在单个命令中回滚 &amp; 迁移</h5><p><strong>migrate:refresh</strong> 命令将会先回滚所有数据库迁移，然后运行 <strong>migrate</strong> 命令。这个命令可以有效的重建整个数据库：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">php artisan migrate:refresh</span><br><span class="line"></span><br><span class="line">// 重建数据库并填充数据...</span><br><span class="line">php artisan migrate:refresh --seed</span><br></pre></td></tr></table></figure></p><h5 id="使用-Yarn-对扩展包进行安装"><a href="#使用-Yarn-对扩展包进行安装" class="headerlink" title="使用 Yarn 对扩展包进行安装"></a>使用 Yarn 对扩展包进行安装</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ yarn install --no-bin-links</span><br><span class="line">$ yarn add cross-env</span><br></pre></td></tr></table></figure><h5 id="使用以下命令来将-scss-文件编译为-css"><a href="#使用以下命令来将-scss-文件编译为-css" class="headerlink" title="使用以下命令来将 .scss 文件编译为 .css"></a>使用以下命令来将 .scss 文件编译为 .css</h5><p><code>$ npm run dev</code></p><h5 id="也可以通过下面的命令，在每次检测到-scss-文件发生更改时，自动将其编译为-css-文件："><a href="#也可以通过下面的命令，在每次检测到-scss-文件发生更改时，自动将其编译为-css-文件：" class="headerlink" title="也可以通过下面的命令，在每次检测到 .scss 文件发生更改时，自动将其编译为 .css 文件："></a>也可以通过下面的命令，在每次检测到 .scss 文件发生更改时，自动将其编译为 .css 文件：</h5><p><code>$ npm run watch-poll</code></p><h5 id="使用-Artisan-命令-make-migration-来创建迁移："><a href="#使用-Artisan-命令-make-migration-来创建迁移：" class="headerlink" title="使用 Artisan 命令 make:migration 来创建迁移："></a>使用 Artisan 命令 make:migration 来创建迁移：</h5><p><code>php artisan make:migration create_users_table</code></p><h5 id="table-和-create-选项可用来指定数据表的名称，或是该迁移被执行时是否将创建的新数据表。这些选项需在预生成迁移文件时填入指定的数据表："><a href="#table-和-create-选项可用来指定数据表的名称，或是该迁移被执行时是否将创建的新数据表。这些选项需在预生成迁移文件时填入指定的数据表：" class="headerlink" title="- -table 和 - -create 选项可用来指定数据表的名称，或是该迁移被执行时是否将创建的新数据表。这些选项需在预生成迁移文件时填入指定的数据表："></a>- -table 和 - -create 选项可用来指定数据表的名称，或是该迁移被执行时是否将创建的新数据表。这些选项需在预生成迁移文件时填入指定的数据表：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">php artisan make:migration create_users_table --create=users</span><br><span class="line">php artisan make:migration add_votes_to_users_table --table=users</span><br></pre></td></tr></table></figure><h5 id="为创建模型命令指定命名空间："><a href="#为创建模型命令指定命名空间：" class="headerlink" title="为创建模型命令指定命名空间："></a>为创建模型命令指定命名空间：</h5><p><code>$ php artisan make:model Models/Article</code></p><h5 id="使用-App-Models-命名空间"><a href="#使用-App-Models-命名空间" class="headerlink" title="使用 App\Models 命名空间"></a>使用 App\Models 命名空间</h5><p>1、修改 User.php 文件，更改 namespace 为我们新创建的文件夹路径：<br>app/Models/User.php<br><code>namespace App\Models;</code><br>2、编辑器全局搜索 App\User 替换为 App\Models\User</p><h5 id="生成模型工厂"><a href="#生成模型工厂" class="headerlink" title="生成模型工厂"></a>生成模型工厂</h5><p><code>php artisan make:factory SystemConfigFactory</code></p><h5 id="运行数据填充"><a href="#运行数据填充" class="headerlink" title="运行数据填充"></a>运行数据填充</h5><p><code>$ php artisan db:seed</code></p>]]></content>
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习 </tag>
+            
+            <tag> 杂记 </tag>
+            
+            <tag> laravel </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>碰到failed to load jvm dll的解决方案</title>
+      <link href="/2018/07/04/%E7%A2%B0%E5%88%B0failed-to-load-jvm-dll%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+      <url>/2018/07/04/%E7%A2%B0%E5%88%B0failed-to-load-jvm-dll%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
+      <content type="html"><![CDATA[<h3 id="启动PhpStorm时，碰到”failed-to-load-jvm-dll”的错误"><a href="#启动PhpStorm时，碰到”failed-to-load-jvm-dll”的错误" class="headerlink" title="启动PhpStorm时，碰到”failed to load jvm dll”的错误"></a>启动PhpStorm时，碰到”failed to load jvm dll”的错误</h3><h4 id="下面是解决方案"><a href="#下面是解决方案" class="headerlink" title="下面是解决方案"></a>下面是解决方案</h4><blockquote><p>安装Microsoft Visual C++ 2010 Redistributable Package</p></blockquote><blockquote><p>32 bit: <a href="http://www.microsoft.com/download/en/details.aspx?id=5555" target="_blank" rel="noopener">http://www.microsoft.com/download/en/details.aspx?id=5555</a></p></blockquote><blockquote><p>64 bit: <a href="http://www.microsoft.com/download/en/details.aspx?id=14632" target="_blank" rel="noopener">http://www.microsoft.com/download/en/details.aspx?id=14632</a></p></blockquote><h5 id="这里是-参考文献"><a href="#这里是-参考文献" class="headerlink" title="这里是 参考文献"></a>这里是 <a href="https://www.cnblogs.com/whu-2017/p/8984038.html" title="别人的博客" target="_blank" rel="noopener">参考文献</a></h5>]]></content>
+      
+      <categories>
+          
+          <category> 其他 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 坑 </tag>
+            
+            <tag> PhpStorm </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>win10显示我的电脑</title>
+      <link href="/2018/07/03/win10%E6%98%BE%E7%A4%BA%E6%88%91%E7%9A%84%E7%94%B5%E8%84%91/"/>
+      <url>/2018/07/03/win10%E6%98%BE%E7%A4%BA%E6%88%91%E7%9A%84%E7%94%B5%E8%84%91/</url>
+      <content type="html"><![CDATA[<h1 id="win10显示我的电脑"><a href="#win10显示我的电脑" class="headerlink" title="win10显示我的电脑"></a>win10显示我的电脑</h1><h3 id="鼠标右键点击任务栏选择-任务栏设置"><a href="#鼠标右键点击任务栏选择-任务栏设置" class="headerlink" title="鼠标右键点击任务栏选择 任务栏设置"></a>鼠标右键点击任务栏选择 任务栏设置</h3><p><img src="http://qiniublog.fplus.top/20180703a01.png" alt="a01"></p><h3 id="点击主题"><a href="#点击主题" class="headerlink" title="点击主题"></a>点击主题</h3><p><img src="http://qiniublog.fplus.top/20180703a02.png" alt="a02"></p><h3 id="点击桌面图标设置"><a href="#点击桌面图标设置" class="headerlink" title="点击桌面图标设置"></a>点击桌面图标设置</h3><p><img src="http://qiniublog.fplus.top/20180703a03.png" alt="a03"></p><h3 id="选中计算机"><a href="#选中计算机" class="headerlink" title="选中计算机"></a>选中计算机</h3><p><img src="http://qiniublog.fplus.top/20180703a04.png" alt="a04"></p><h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p><img src="http://qiniublog.fplus.top/20180703a05.png" alt="a05"></p>]]></content>
+      
+      <categories>
+          
+          <category> 其他 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 杂记 </tag>
+            
+            <tag> win10 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Alt+ASCII 特殊字符</title>
+      <link href="/2018/06/22/alt+ascii,%E6%89%93%E5%87%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6/"/>
+      <url>/2018/06/22/alt+ascii,%E6%89%93%E5%87%BA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6/</url>
+      <content type="html"><![CDATA[<p>先按住Alt键，不要放  然后继续按小键盘的数字键  ，按完数字键后  放掉Alt键   特殊字符就数来了</p><blockquote><p>常用特殊符号：</p></blockquote><blockquote><p>Alt+43081 ↖<br>Alt+43082 ↗<br>Alt+43083 ↘<br>Alt+43084 ↙<br>Alt+43100 ╘<br>Alt+43365 〆<br>alt+34149 卐<br>alt+43144 ▓<br>alt+43151 ◤<br>alt+41459 ◇<br>alt+41460 ◆<br>alt+43113 ╥<br>alt+43114 ╦<br>alt+43115 ╧<br>alt+43116 ╨<br>alt+43117 ╩<br>alt+43118 ╪<br>alt+43119 ╫<br>alt+43120 ╬<br>alt+43121 ╭<br>alt+43122 ╮<br>alt+43123 ╯<br>alt+43124 ╰<br>alt+43125 ╱<br>alt+43126 ╲<br>alt+43127 ╳</p></blockquote><h1 id="分界线"><a href="#分界线" class="headerlink" title="分界线"></a>分界线</h1><blockquote><p>alt+34147=卌<br> alt+34148=卍<br> alt+34149=卐<br> alt+41418=∈<br> alt+41420=√<br> alt+41423=∠<br> alt+41424=⌒<br> alt+41428=≡<br> alt+41441=♂<br> alt+41442=♀<br> alt+41457=●<br> alt+41458=◎<br> alt+41459=◇<br> alt+41460=◆<br> alt+41466=→<br> alt=41467=←<br> alt+41468=↑<br> alt+41469=↓<br> alt+42664=Θ<br> alt+42965=д<br> alt+43081=↖<br> alt+43082=↗<br> alt+43083=↘<br> alt+43084=↙<br> alt+43088=≈<br> alt+43100=╘<br> alt+43113=╥<br> alt+43114=╦<br> alt+43115=╧<br> alt+43116=╨<br> alt+43117=╩<br> alt+43118=╪<br> alt+43119=╫<br> alt+43120=╬<br> alt+43121=╭<br> alt+43122=╮<br> alt+43123=╯<br> alt+43124=╰<br> alt+43125=╱<br> alt+43126=╲<br> alt+43127=╳<br> alt+43128=▁<br> alt+43129=▂<br> alt+43130=▃<br> alt+43131=▄<br> alt+43132=▅<br> alt+43133=▆<br> alt+43134=▇<br> alt+43138=▊<br> alt+43139=▋<br> alt+43140=▌<br> alt+43141=▍<br> alt+43142=▎<br> alt+43143=▏<br> alt+43144=▓<br> alt+43145=▔<br> alt+43146=▕<br> alt+43147=▼<br> alt+43148=▽<br> alt+43149=◢<br> alt+43150=◣<br> alt+43151=◤<br> alt+43152=◥<br> alt+43153=☉<br> alt+43154=⊕<br> alt+43155=〒<br> alt+43156=〝<br> alt+43222=ㄖ<br> alt+43337=㊣<br> alt+43353=℡<br> alt+43361=゛<br> alt+43362=゜<br> alt+43363=ヽ<br> alt+43364=ヾ<br> alt+43365=〆<br> alt+43366=ゝ<br> alt+43367=ゞ<br> alt+43368=﹉<br> alt+43369=﹊<br> alt+43370=﹋<br> alt+43371=﹌<br> alt+43373=﹎<br> alt+43374=﹏<br> alt+43401=<br> alt+43402=<br> alt+43403=<br> alt+43404=<br> alt+43405=<br> alt+43406=<br> alt+43407=<br> alt+43408=<br> alt+43409=<br> alt+43410=<br> alt+43411=<br> alt+43412=<br> alt+43413=<br> alt+43414=〇<br> ————————<br> ALT+153=™（商标符号TM）<br> ALT+169=© （商标符号C）<br> ALT+174=®（商标符号R）<br> ALT+177=±<br> ALT+178=²（上标2）<br> ALT+179=³（上标3）<br> ALT+188=¼（四分之一）<br> ALT+189=½（二分之一）<br> ALT+128= €（欧元符号）<br> ALT+163= £（英镑符号）<br> ALT+176= ° (°C)<br> ALT+186= º<br> ALT+137=‰<br> ALT+43399=﹪<br> ALT+165=¥（人民币符号）<br> ALT+181=µ<br> ALT+223=ß<br> ALT+216= Ø（空集）<br> ALT+215= ×<br> ALT+123={<br> ALT+125=}<br> ALT+3333=回车<br> ATL+14552=8<br> ATL+25554=c<br> ALT+178——平方（²）<br> ALT+179——立方（³）<br> ALT+176——度（°）<br> ALT+41463——三角形（△）<br> ALT+41418——属于（∈）<br> ALT+41420——根号（√）<br> ALT+41423——角（∠）<br> ALT+41438=∞  </p></blockquote>]]></content>
+      
+      <categories>
+          
+          <category> 其他 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Alt </tag>
+            
+            <tag> 特殊字符 </tag>
+            
+            <tag> ASCII </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>小米影视会员赠送的爱奇艺黄金会员的使用方法</title>
+      <link href="/2018/06/12/%E5%B0%8F%E7%B1%B3%E5%BD%B1%E8%A7%86%E4%BC%9A%E5%91%98%E8%B5%A0%E9%80%81%E7%9A%84%E7%88%B1%E5%A5%87%E8%89%BA%E9%BB%84%E9%87%91%E4%BC%9A%E5%91%98%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"/>
+      <url>/2018/06/12/%E5%B0%8F%E7%B1%B3%E5%BD%B1%E8%A7%86%E4%BC%9A%E5%91%98%E8%B5%A0%E9%80%81%E7%9A%84%E7%88%B1%E5%A5%87%E8%89%BA%E9%BB%84%E9%87%91%E4%BC%9A%E5%91%98%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</url>
+      <content type="html"><![CDATA[<h1 id="我是趁着618活动5折249元买的小米影视年卡会员-雷军亏大了，快亏成首富了"><a href="#我是趁着618活动5折249元买的小米影视年卡会员-雷军亏大了，快亏成首富了" class="headerlink" title="我是趁着618活动5折249元买的小米影视年卡会员,雷军亏大了，快亏成首富了"></a>我是趁着618活动5折249元买的小米影视年卡会员,雷军亏大了，快亏成首富了</h1><h1 id="赠送的爱奇艺黄金会员使用方法"><a href="#赠送的爱奇艺黄金会员使用方法" class="headerlink" title="赠送的爱奇艺黄金会员使用方法"></a>赠送的爱奇艺黄金会员使用方法</h1><blockquote><h4 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h4><p>在电脑上打开爱奇艺点登陆 选其他方式登陆 选择小米账号（进去就是会员了） </p></blockquote><blockquote><h4 id="第二步-想要在电视上的奇艺果也有会员的话"><a href="#第二步-想要在电视上的奇艺果也有会员的话" class="headerlink" title="第二步 想要在电视上的奇艺果也有会员的话"></a>第二步 想要在电视上的奇艺果也有会员的话</h4><p>登陆后会提示绑定手机号,填自己的手机号绑定就行了。这里很有可能自己常用的手机号已经有爱奇艺账号了，<br>我的做法是，在登陆前，先登陆自己的爱奇艺账号，修改绑定的手机，用自己不常用的手机号或家人的手机号<br>这时自己常用的手机号就是自由的了，可以重新用小米账号登陆爱奇艺，在个人设置里绑定自己的手机，这时<br>用绑定的手机号登陆电视上的奇艺果也有会员了。</p></blockquote>]]></content>
+      
+      <categories>
+          
+          <category> 其他 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 小米 </tag>
+            
+            <tag> 爱奇艺 </tag>
+            
+            <tag> 会员 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>在另一台电脑上快速同步自己的博客</title>
+      <link href="/2018/06/12/%E5%9C%A8%E5%8F%A6%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%E4%B8%8A%E5%BF%AB%E9%80%9F%E5%90%8C%E6%AD%A5%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/"/>
+      <url>/2018/06/12/%E5%9C%A8%E5%8F%A6%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%E4%B8%8A%E5%BF%AB%E9%80%9F%E5%90%8C%E6%AD%A5%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/</url>
+      <content type="html"><![CDATA[<h1 id="这里这记录我用的代码，以免我忘记"><a href="#这里这记录我用的代码，以免我忘记" class="headerlink" title="这里这记录我用的代码，以免我忘记"></a>这里这记录我用的代码，以免我忘记</h1><h3 id="前提是我在码云上存有我博客的原始文件"><a href="#前提是我在码云上存有我博客的原始文件" class="headerlink" title="前提是我在码云上存有我博客的原始文件"></a>前提是我在码云上存有我博客的原始文件</h3><blockquote><h4 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h4><p><code>$ npm install -g hexo-cli</code></p></blockquote><blockquote><h4 id="同步我的博客原文件"><a href="#同步我的博客原文件" class="headerlink" title="同步我的博客原文件"></a>同步我的博客原文件</h4><p><code>$ git clone https://gitee.com/followzero/hexo.git</code></p></blockquote><blockquote><h4 id="进入我的博客目录"><a href="#进入我的博客目录" class="headerlink" title="进入我的博客目录"></a>进入我的博客目录</h4><p><code>$ cd hexo</code></p></blockquote><blockquote><h4 id="安装hexo，会产生node-modules文件夹"><a href="#安装hexo，会产生node-modules文件夹" class="headerlink" title="安装hexo，会产生node_modules文件夹"></a>安装hexo，会产生node_modules文件夹</h4><p><code>$ npm install hexo --save</code></p><h6 id="完成。"><a href="#完成。" class="headerlink" title="完成。"></a>完成。</h6></blockquote><blockquote><h4 id="Hexo-三步"><a href="#Hexo-三步" class="headerlink" title="Hexo 三步"></a>Hexo 三步</h4><p><code>$ hexo clean</code><br><code>$ hexo g</code><br><code>$ hexo d</code></p></blockquote>]]></content>
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 杂记 </tag>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>其他</title>
+      <link href="/2018/06/10/hello-ext/"/>
+      <url>/2018/06/10/hello-ext/</url>
+      <content type="html"><![CDATA[<h1 id="flag"><a href="#flag" class="headerlink" title="flag"></a>flag</h1>]]></content>
+      
+      <categories>
+          
+          <category> 其他 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>我的最简单、最有效的恋爱技巧</title>
+      <link href="/2018/06/10/hello-love/"/>
+      <url>/2018/06/10/hello-love/</url>
+      <content type="html"><![CDATA[<h1 id="99-9-成功率，最容易掌握的恋爱技巧："><a href="#99-9-成功率，最容易掌握的恋爱技巧：" class="headerlink" title="99.9%成功率，最容易掌握的恋爱技巧："></a>99.9%成功率，最容易掌握的恋爱技巧：</h1><h3 id="拿好纸笔要记了"><a href="#拿好纸笔要记了" class="headerlink" title="拿好纸笔要记了"></a>拿好纸笔要记了</h3><blockquote><p>帅</p></blockquote>]]></content>
+      
+      <categories>
+          
+          <category> 爱情 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 爱情 </tag>
+            
+            <tag> 技巧 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2018/06/06/hello-world/"/>
+      <url>/2018/06/06/hello-world/</url>
+      <content type="html"><![CDATA[<p>学习从 “Hello World” 开始 </p>]]></content>
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习 </tag>
+            
+            <tag> 开始 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+  
+  
+</search>
